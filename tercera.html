@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pádel y deportes</title>
+  <link rel="stylesheet" href="tercera.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Nuestras aventuras con el pádel y deportes en general...</h1>
+  </header>
+
+  <!-- Card container with two cards -->
+  <div class="card-container">
+    <div class="card" onclick="changeFrameImage('frame1', 'https://via.placeholder.com/150')">
+      <img src="ruta strava bordes.jpeg" alt="Card 1">
+    </div>
+    <div class="card" onclick="changeFrameImage('frame2', 'https://via.placeholder.com/150')">
+      <img src="meme bus haciendo el tonto.jpg" alt="Card 2">
+    </div>
+  </div>
+
+  <!-- Frame containers for photos and text -->
+  <div class="frame-container">
+    
+    <div class="frame" id="frame3" onclick="selectFrame('frame3')">
+      <textarea placeholder="Escribe aquí..." readonly></textarea>
+    </div>
+    <div class="frame" id="frame4" onclick="selectFrame('frame4')">
+      <textarea placeholder="Escribe aquí..." readonly></textarea>
+    </div>
+    <div class="frame" id="frame5" onclick="selectFrame('frame5')">
+      <textarea placeholder="Escribe aquí..." readonly></textarea>
+    </div>
+  </div>
+
+  <!-- Button Container -->
+  <div class="button-container">
+    <a href="cuarta.html">
+    <button class="next-button">Siguiente</button></a>
+  </div>
+
+  <script>
+    // Function to change the image of a specific frame when a card is clicked
+    function changeFrameImage(frameId, imageUrl) {
+      const frame = document.getElementById(frameId);
+      const img = frame.querySelector('img');
+      if (img) {
+        img.src = imageUrl;
+      }
+    }
+
+    // Function to add an active class to the selected frame for visual feedback
+    function selectFrame(frameId) {
+      const frames = document.querySelectorAll('.frame');
+      frames.forEach(frame => frame.classList.remove('active-frame'));
+      const selectedFrame = document.getElementById(frameId);
+      selectedFrame.classList.add('active-frame');
+    }
+  </script>
+</body>
+</html>

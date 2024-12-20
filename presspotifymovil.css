@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+/* Estilos generales para pantallas pequeñas */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #1c2833, #34495e);
+    color: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.header1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%; /* Hace que el header ocupe todo el ancho */
+    z-index: 1000;
+    padding: 20px 0; /* Espaciado interno solo arriba y abajo */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    background: linear-gradient(135deg, #2c3e50, #2c3e50, #7f8c8d);
+    color: #f4f4f4;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.5;
+    border: none; /* Elimina los bordes */
+    box-shadow: none; /* Elimina sombras */
+    margin: 0; /* Elimina márgenes */
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Separación del header */
+}
+
+.image-container img {
+    display: block;
+    width: 400px;
+    height: auto;
+    border-radius: 15px; /* Opcional: redondeo de bordes */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Opcional: sombra decorativa */
+}
+
+.main {
+    background-color: rgb(36, 36, 36);
+    padding: 1em;
+    border-radius: 10px;
+    width: calc(100% - 40px); /* Centrada con márgenes laterales */
+    margin: 20px auto; /* Espaciado arriba y abajo */
+}
+
+.loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.loader:hover {
+    background-color: lightgray;
+}
+
+.currentplaying {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.spotify {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.heading {
+    font-size: 1rem;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.load {
+    width: 3px;
+    height: 30px;
+    background-color: limegreen;
+    border-radius: 4px;
+    margin: 0 3px;
+}
+
+.play {
+    height: 1.5em;
+    width: 1.5em;
+    background-color: #00FF7F;
+    clip-path: polygon(50% 50%, 100% 50%, 75% 6.6%);
+    margin-top: 10px;
+}
+
+.albumcover {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.song {
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.artist {
+    font-size: 0.8em;
+}
+
+@keyframes move6 {
+    0% {
+        height: 0.4em;
+    }
+    25% {
+        height: 1em;
+    }
+    50% {
+        height: 1.5em;
+    }
+    100% {
+        height: 0.4em;
+    }
+}

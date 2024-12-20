@@ -1,0 +1,158 @@
+/* CSS para pantallas móviles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Fondo oscuro de Spotify */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 10px;
+}
+
+.header-logo {
+    display: block;
+    width: 100%; /* Puedes ajustar esto según sea necesario */
+}
+
+.album-thumbnail {
+    width: 100%;
+    max-width: 300px;
+    height: 0;
+    padding-bottom: 100%; /* Mantiene proporción cuadrada */
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.song-details {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.song-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.song-artist {
+    font-size: 1rem;
+    color: #b3b3b3;
+}
+
+.player-card {
+    background-color: #1e1e1e; /* Fondo ligeramente más claro */
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.4s, transform 0.4s;
+}
+
+.player-card:hover {
+    box-shadow: 0 0 30px rgba(29, 185, 84, 0.8); /* Resplandor verde Spotify */
+    transform: scale(1.05); /* Aumenta ligeramente la tarjeta */
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.controls button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s, color 0.2s;
+}
+
+.controls button:hover {
+    transform: scale(1.2);
+    color: #1db954;
+    box-shadow: 0 0 10px #1db954;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 5px;
+    background: #535353;
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.progress {
+    width: 40%;
+    height: 100%;
+    background: #1db954; /* Verde Spotify */
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+a {
+    color: #1db954;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+
+
+    .album-thumbnail {
+        margin-bottom: 15px;
+    }
+
+    .player-card {
+        margin-bottom: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .song-title {
+        font-size: 1.3rem;
+    }
+
+    .song-artist {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .header-logo {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .header-logo {
+        display: block;
+        width: auto; /* Ajusta el tamaño de la imagen si es necesario */
+    }
+}
